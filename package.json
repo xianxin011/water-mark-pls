@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "water-mark-pls.js",
+  "description": "watermark for DOM",
+  "author": {
+    "name": "xianxin_",
+    "email": "code_xiaozhu@163.com"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "water-mark-pls",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgu-x/water-mark-pls.git",
+    "branch": "master",
+    "platform": "github"
+  },
+  "bugs": {
+    "url": "https://github.com/mgu-x/water-mark-pls.git/issues",
+    "email": "code_xiaozhu@163.com"
+  }
+}

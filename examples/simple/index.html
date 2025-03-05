@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>water-mark</title>
+    <style>
+        body {
+            height: 1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript" src="./water-mark.js"></script>
+    <script>
+        window.onload = function () {
+            watermark.load({
+                watermark_txt: '1050226 xianxin_',
+                watermark_fontsize: '20px',
+                watermark_width: 90,
+                watermark_height: 60,
+                watermark_angle: 10,
+                watermark_y_space: 10,
+                watermark_color_size: 10,
+                watermark_angle_random: true
+            })
+        }
+    </script>
+</body>
+
+</html>
