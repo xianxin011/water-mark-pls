@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "main": "water-mark-pls.js",
   "description": "watermark for DOM",
@@ -19,12 +19,12 @@
   "name": "water-mark-pls",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mgu-x/water-mark-pls.git",
+    "url": "https://github.com/xianxin011/water-mark-pls.git",
     "branch": "master",
     "platform": "github"
   },
   "bugs": {
-    "url": "https://github.com/mgu-x/water-mark-pls.git/issues",
+    "url": "https://github.com/xianxin011/water-mark-pls/issues",
     "email": "code_xiaozhu@163.com"
   }
 }
