@@ -71,7 +71,7 @@
 ```
 
 
-![image](./examples/image/simple.png)
+![image](https://github.com/xianxin011/water-mark-pls/blob/master/examples/image/simple.png)
 
 ### 2.2 npm包引入
 
