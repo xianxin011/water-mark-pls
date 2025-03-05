@@ -5,8 +5,8 @@
     define([], factory());
   } else if (typeof module === 'object' && module.exports) {
     /*Node. Does not work with strict CommonJS, but
-      // only CommonJS-like environments that support module.exports,
-      // like Node.*/
+    // only CommonJS-like environments that support module.exports,
+    // like Node.*/
     module.exports = factory();
   } else {
     /*Browser globals (root is window)*/
@@ -49,7 +49,7 @@
     window.MozMutationObserver;
 
   //监听dom是否被移除或者改变属性的回调函数
-  var domChangeCallback = function (records) {
+  const domChangeCallback = function (records) {
     if (forceRemove) {
       forceRemove = false;
       return;
@@ -74,7 +74,6 @@
 
   /*加载水印*/
   var loadMark = function (settings) {
-    /*采用配置项替换默认值，作用类似jquery.extend*/
     if (arguments.length === 1 && typeof arguments[0] === 'object') {
       var src = arguments[0] || {};
       for (let key in src) {
