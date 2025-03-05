@@ -1,16 +1,16 @@
 (function (root, factory) {
-  if (typeof define === "function" && define.amd) {
+  if (typeof define === 'function' && define.amd) {
     /*AMD. Register as an anonymous module.
      *define([], factory); */
     define([], factory());
-  } else if (typeof module === "object" && module.exports) {
+  } else if (typeof module === 'object' && module.exports) {
     /*Node. Does not work with strict CommonJS, but
       // only CommonJS-like environments that support module.exports,
       // like Node.*/
     module.exports = factory();
   } else {
     /*Browser globals (root is window)*/
-    root["watermark"] = factory();
+    root['watermark'] = factory();
   }
 })(this, function () {
   /*Just return a value to define the module export.*/
@@ -19,19 +19,19 @@
   var forceRemove = false;
 
   var defaultSettings = {
-    watermark_id: "wm_div_id", //水印总体的id
-    watermark_prefix: "mask_div_id", //小水印的id前缀
-    watermark_txt: "测试水印", //水印的内容
+    watermark_id: 'wm_div_id', //水印总体的id
+    watermark_prefix: 'mask_div_id', //小水印的id前缀
+    watermark_txt: '测试水印', //水印的内容
     watermark_x: 20, //水印起始位置x轴坐标
     watermark_y: 20, //水印起始位置Y轴坐标
     watermark_rows: 0, //水印行数
     watermark_cols: 0, //水印列数
     watermark_x_space: 50, //水印x轴间隔
     watermark_y_space: 50, //水印y轴间隔
-    watermark_font: "微软雅黑", //水印字体
-    watermark_color: "black", //水印字体颜色
+    watermark_font: '微软雅黑', //水印字体
+    watermark_color: 'black', //水印字体颜色
     watermark_color_size: 0, // 水印字体颜色数量
-    watermark_fontsize: "18px", //水印字体大小
+    watermark_fontsize: '18px', //水印字体大小
     watermark_alpha: 0.15, //水印透明度，要求设置在大于等于0.005
     watermark_width: 100, //水印宽度
     watermark_height: 100, //水印长度
@@ -75,9 +75,9 @@
   /*加载水印*/
   var loadMark = function (settings) {
     /*采用配置项替换默认值，作用类似jquery.extend*/
-    if (arguments.length === 1 && typeof arguments[0] === "object") {
+    if (arguments.length === 1 && typeof arguments[0] === 'object') {
       var src = arguments[0] || {};
-      for (key in src) {
+      for (let key in src) {
         if (
           src[key] &&
           defaultSettings[key] &&
@@ -148,17 +148,17 @@
     var shadowRoot = null;
 
     if (!otdiv) {
-      otdiv = document.createElement("div");
+      otdiv = document.createElement('div');
       /*创建shadow dom*/
       otdiv.id = defaultSettings.watermark_id;
       otdiv.setAttribute(
-        "style",
-        "pointer-events: none !important; display: block !important"
+        'style',
+        'pointer-events: none !important; display: block !important'
       );
       /*判断浏览器是否支持attachShadow方法*/
-      if (typeof otdiv.attachShadow === "function") {
+      if (typeof otdiv.attachShadow === 'function') {
         /* createShadowRoot Deprecated. Not for use in new websites. Use attachShadow*/
-        shadowRoot = otdiv.attachShadow({ mode: "open" });
+        shadowRoot = otdiv.attachShadow({ mode: 'open' });
       } else {
         shadowRoot = otdiv;
       }
@@ -268,7 +268,7 @@
               defaultSettings.watermark_x_space) *
               j;
         }
-        var mask_div = document.createElement("div");
+        var mask_div = document.createElement('div');
         var oText = document.createTextNode(defaultSettings.watermark_txt);
         mask_div.appendChild(oText);
         /*设置水印相关属性start*/
@@ -285,22 +285,22 @@
           ? Math.floor(Math.random() * i * 360) % 360
           : defaultSettings.watermark_angle;
         mask_div.style.webkitTransform =
-          "rotate(-" + angleFactor + "deg)" + " scale(" + scaleFactor + ")";
+          'rotate(-' + angleFactor + 'deg)' + ' scale(' + scaleFactor + ')';
         mask_div.style.MozTransform =
-          "rotate(-" + angleFactor + "deg)" + " scale(" + scaleFactor + ")";
+          'rotate(-' + angleFactor + 'deg)' + ' scale(' + scaleFactor + ')';
         mask_div.style.msTransform =
-          "rotate(-" + angleFactor + "deg)" + " scale(" + scaleFactor + ")";
+          'rotate(-' + angleFactor + 'deg)' + ' scale(' + scaleFactor + ')';
         mask_div.style.OTransform =
-          "rotate(-" + angleFactor + "deg)" + " scale(" + scaleFactor + ")";
+          'rotate(-' + angleFactor + 'deg)' + ' scale(' + scaleFactor + ')';
         mask_div.style.transform =
-          "rotate(-" + angleFactor + "deg)" + " scale(" + scaleFactor + ")";
-        mask_div.style.visibility = "";
-        mask_div.style.position = "absolute";
+          'rotate(-' + angleFactor + 'deg)' + ' scale(' + scaleFactor + ')';
+        mask_div.style.visibility = '';
+        mask_div.style.position = 'absolute';
         /*选不中*/
-        mask_div.style.left = x + "px";
-        mask_div.style.top = y + "px";
-        mask_div.style.overflow = "hidden";
-        mask_div.style.zIndex = "9999999";
+        mask_div.style.left = x + 'px';
+        mask_div.style.top = y + 'px';
+        mask_div.style.overflow = 'hidden';
+        mask_div.style.zIndex = '9999999';
         mask_div.style.opacity = defaultSettings.watermark_alpha;
         mask_div.style.fontSize = defaultSettings.watermark_fontsize;
         mask_div.style.fontFamily = defaultSettings.watermark_font;
@@ -308,11 +308,11 @@
           defaultSettings.watermark_color_size > 0
             ? colorFactor
             : defaultSettings.watermark_color;
-        mask_div.style.textAlign = "center";
-        mask_div.style.width = defaultSettings.watermark_width + "px";
-        mask_div.style.height = defaultSettings.watermark_height + "px";
-        mask_div.style.display = "block";
-        mask_div.style["-ms-user-select"] = "none";
+        mask_div.style.textAlign = 'center';
+        mask_div.style.width = defaultSettings.watermark_width + 'px';
+        mask_div.style.height = defaultSettings.watermark_height + 'px';
+        mask_div.style.display = 'block';
+        mask_div.style['-ms-user-select'] = 'none';
         /*设置水印相关属性end*/
         shadowRoot.appendChild(mask_div);
       }
@@ -336,9 +336,9 @@
   /*移除水印*/
   var removeMark = function () {
     /*采用配置项替换默认值，作用类似jquery.extend*/
-    if (arguments.length === 1 && typeof arguments[0] === "object") {
+    if (arguments.length === 1 && typeof arguments[0] === 'object') {
       var src = arguments[0] || {};
-      for (key in src) {
+      for (let key in src) {
         if (
           src[key] &&
           defaultSettings[key] &&
@@ -371,10 +371,10 @@
   watermark.init = function (settings) {
     globalSetting = settings;
     loadMark(settings);
-    window.addEventListener("onload", function () {
+    window.addEventListener('onload', function () {
       loadMark(settings);
     });
-    window.addEventListener("resize", function () {
+    window.addEventListener('resize', function () {
       loadMark(settings);
     });
   };
@@ -408,10 +408,10 @@
     if (watermark_parent_element) {
       var newWidth = getComputedStyle(
         watermark_parent_element
-      ).getPropertyValue("width");
+      ).getPropertyValue('width');
       var newHeight = getComputedStyle(
         watermark_parent_element
-      ).getPropertyValue("height");
+      ).getPropertyValue('height');
       if (
         newWidth !== recordOldValue.width ||
         newHeight !== recordOldValue.height
@@ -429,7 +429,7 @@
     childList: true,
     attributes: true,
     subtree: true,
-    attributeFilter: ["style"],
+    attributeFilter: ['style'],
     attributeOldValue: true,
   };
 
@@ -439,8 +439,8 @@
   };
 
   var generateRandomHexColor = function () {
-    let letters = "0123456789ABCDEF";
-    let color = "#";
+    let letters = '0123456789ABCDEF';
+    let color = '#';
     for (let i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
     }
