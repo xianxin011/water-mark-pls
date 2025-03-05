@@ -2,12 +2,11 @@
 
 [![](https://img.shields.io/badge/Powered%20by-xianxin%20-brightgreen.svg)](https://github.com/xianxin011/water-mark-pls)
 [![GitHub license][license-image]][license-url]
-[![GitHub version][version-image]][version-url]
+<!-- [![GitHub version][version-image]][version-url] -->
 [![GitHub stars][stars-image]][stars-url]
 [![GitHub forks][forks-image]][forks-url]
 [![GitHub issues][issues-image]][issues-image]
 [![npm download][download-image]][download-url]
-[![HitCount][hits-image]][hits-url]
 
 [license-image]: https://img.shields.io/github/license/xianxin011/watermark-dom.svg
 [license-url]: https://github.com/xianxin011/water-mark-pls/blob/master/LICENSE
