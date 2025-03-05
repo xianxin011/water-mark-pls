@@ -2,7 +2,6 @@
 
 [![](https://img.shields.io/badge/Powered%20by-xianxin%20-brightgreen.svg)](https://github.com/xianxin011/water-mark-pls)
 [![GitHub license][license-image]][license-url]
-<!-- [![GitHub version][version-image]][version-url] -->
 [![GitHub stars][stars-image]][stars-url]
 [![GitHub forks][forks-image]][forks-url]
 [![GitHub issues][issues-image]][issues-image]
@@ -10,8 +9,6 @@
 
 [license-image]: https://img.shields.io/github/license/xianxin011/watermark-dom.svg
 [license-url]: https://github.com/xianxin011/water-mark-pls/blob/master/LICENSE
-<!-- [version-image]: https://img.shields.io/github/package-json/v/xianxin011/watermark-dom.svg -->
-[version-url]: https://github.com/xianxin011/water-mark-pls/blob/master/package-json
 [stars-image]: https://img.shields.io/github/stars/xianxin011/watermark-dom.svg
 [stars-url]: https://github.com/xianxin011/water-mark-pls/stargazers
 [forks-image]: https://img.shields.io/github/forks/xianxin011/watermark-dom.svg
