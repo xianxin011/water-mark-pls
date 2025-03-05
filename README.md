@@ -1,6 +1,6 @@
 
 
-[![](https://img.shields.io/badge/Powered%20by-saucxs%20-brightgreen.svg)](https://github.com/saucxs/watermark-dom)
+[![](https://img.shields.io/badge/Powered%20by-xianxin%20-brightgreen.svg)](https://github.com/xianxin011/water-mark-pls)
 [![GitHub license][license-image]][license-url]
 [![GitHub version][version-image]][version-url]
 [![GitHub stars][stars-image]][stars-url]
@@ -9,20 +9,19 @@
 [![npm download][download-image]][download-url]
 [![HitCount][hits-image]][hits-url]
 
-[license-image]: https://img.shields.io/github/license/saucxs/watermark-dom.svg
-[license-url]: https://github.com/saucxs/watermark-dom/blob/master/LICENSE
-[version-image]: https://img.shields.io/github/package-json/v/saucxs/watermark-dom.svg
-[version-url]: https://github.com/saucxs/watermark-dom/blob/master/package-json
-[stars-image]: https://img.shields.io/github/stars/saucxs/watermark-dom.svg
-[stars-url]: https://github.com/saucxs/watermark-dom/stargazers
-[forks-image]: https://img.shields.io/github/forks/saucxs/watermark-dom.svg
-[forks-url]: https://github.com/saucxs/watermark-dom/network
-[issues-image]: https://img.shields.io/github/issues/saucxs/watermark-dom.svg
-[issues-url]: https://github.com/saucxs/watermark-dom/issues
+[license-image]: https://img.shields.io/github/license/xianxin011/watermark-dom.svg
+[license-url]: https://github.com/xianxin011/water-mark-pls/blob/master/LICENSE
+<!-- [version-image]: https://img.shields.io/github/package-json/v/xianxin011/watermark-dom.svg -->
+[version-url]: https://github.com/xianxin011/water-mark-pls/blob/master/package-json
+[stars-image]: https://img.shields.io/github/stars/xianxin011/watermark-dom.svg
+[stars-url]: https://github.com/xianxin011/water-mark-pls/stargazers
+[forks-image]: https://img.shields.io/github/forks/xianxin011/watermark-dom.svg
+[forks-url]: https://github.com/xianxin011/water-mark-pls/network
+[issues-image]: https://img.shields.io/github/issues/xianxin011/watermark-dom.svg
+[issues-url]: https://github.com/xianxin011/water-mark-pls/issues
 [download-image]: https://img.shields.io/npm/dm/watermark-dom.svg
 [download-url]: https://npmjs.org/package/watermark-dom
-[hits-image]: http://hits.dwyl.io/saucxs/https://githubcom/saucxs/watermark-dom.svg
-[hits-url]: http://hits.dwyl.io/saucxs/https://githubcom/saucxs/watermark-dom
+[hits-image]: http://hits.dwyl.io/xianxin011/https://githubcom/xianxin011/watermark-dom.svg
 
 `watermark.js`是基于DOM对象实现的BS系统的水印，确保系统保密性，安全性，降低数据泄密风险，简单轻量，支持多属性配置，动态计算水印，水印防被删（监听水印组件元素删除并重新添加，监听改变水印的属性并重新添加）。
 
@@ -55,7 +54,7 @@
 
 `watermark.js`是必须要引进的组件
 
-第一步：获取组件方式：`git clone https://github.com/saucxs/watermark-dom.git`
+第一步：获取组件方式：`git clone https://github.com/xianxin011/water-mark-pls.git`
 
 第二步：clone后，在需要加水印的相关页面引入水印文件"watermark.js":
 
@@ -114,7 +113,7 @@ var watermarkDom = require("water-mark-pls")
 
 ## 3、水印demo（测试工具）
 
-查看地址：https://www.mwcxs.top/static/testTool/index.html
+查看地址：https://github.com/xianxin011/water-mark-pls/blob/master/examples/simple/index.html
 
 
 ## 4、内置方法
