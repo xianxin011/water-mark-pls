@@ -282,7 +282,9 @@
             ) % defaultSettings.watermark_color_size
           ];
         const angleFactor = defaultSettings.watermark_angle_random
-          ? Math.floor(Math.random() * i * 360) % 360
+          ? i == 0
+            ? Math.trunc(Math.random() * 360)
+            : Math.floor(Math.random() * i * 360) % 360
           : defaultSettings.watermark_angle;
         mask_div.style.webkitTransform =
           'rotate(-' + angleFactor + 'deg)' + ' scale(' + scaleFactor + ')';
