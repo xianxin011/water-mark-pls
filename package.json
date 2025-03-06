@@ -2,7 +2,14 @@
   "version": "1.0.4",
   "license": "MIT",
   "main": "index.js",
+  "keywords": [
+    "watermark",
+    "water-dom"
+  ],
   "description": "watermark for DOM",
+  "files": [
+    "index.js"
+  ],
   "author": {
     "name": "xianxin_",
     "email": "code_xiaozhu@163.com"
