@@ -1,7 +1,7 @@
 {
   "version": "1.0.4",
   "license": "MIT",
-  "main": "water-mark-pls.js",
+  "main": "index.js",
   "description": "watermark for DOM",
   "author": {
     "name": "xianxin_",
