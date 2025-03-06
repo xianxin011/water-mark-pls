@@ -7,25 +7,24 @@
 [![GitHub issues][issues-image]][issues-image]
 [![npm download][download-image]][download-url]
 
-[license-image]: https://img.shields.io/github/license/xianxin011/watermark-dom.svg
+[license-image]: https://img.shields.io/github/license/xianxin011/water-mark-pls.svg
 [license-url]: https://github.com/xianxin011/water-mark-pls/blob/master/LICENSE
-[stars-image]: https://img.shields.io/github/stars/xianxin011/watermark-dom.svg
+[stars-image]: https://img.shields.io/github/stars/xianxin011/water-mark-pls.svg
 [stars-url]: https://github.com/xianxin011/water-mark-pls/stargazers
-[forks-image]: https://img.shields.io/github/forks/xianxin011/watermark-dom.svg
+[forks-image]: https://img.shields.io/github/forks/xianxin011/water-mark-pls.svg
 [forks-url]: https://github.com/xianxin011/water-mark-pls/network
-[issues-image]: https://img.shields.io/github/issues/xianxin011/watermark-dom.svg
+[issues-image]: https://img.shields.io/github/issues/xianxin011/water-mark-pls.svg
 [issues-url]: https://github.com/xianxin011/water-mark-pls/issues
-[download-image]: https://img.shields.io/npm/dm/watermark-dom.svg
-[download-url]: https://npmjs.org/package/watermark-dom
-[hits-image]: http://hits.dwyl.io/xianxin011/https://githubcom/xianxin011/watermark-dom.svg
+[download-image]: https://img.shields.io/npm/dm/water-mark-pls.svg
+[download-url]: https://npmjs.org/package/water-mark-pls
 
-`watermark.js`是基于DOM对象实现的BS系统的水印，确保系统保密性，安全性，降低数据泄密风险，简单轻量，支持多属性配置，动态计算水印，水印防被删（监听水印组件元素删除并重新添加，监听改变水印的属性并重新添加）。
+`water-mark-pls.js`是基于DOM对象实现的BS系统的水印，确保系统保密性，安全性，降低数据泄密风险，简单轻量，支持多属性配置，动态计算水印，水印防被删（监听水印组件元素删除并重新添加，监听改变水印的属性并重新添加）。
 
 特性：
-
-+ 多属性配置，简单易上手
 + 动态计算水印
-+ **水印防被删(监听水印组件元素删除并重新添加，监听改变水印的属性并重新添加)**
++ 防止AI破解水印
++ 多属性配置，简单易上手
++ 水印防被删(监听水印组件元素删除并重新添加，监听改变水印的属性并重新添加)
 + 支持2种导入使用：本地引用，npm引用
 + 水印测试工具：testTool工具
 + 内置3种全局API方法：init()，load(), remove()。
@@ -34,12 +33,12 @@
 注意：基于本项目源码从事科研、论文、系统开发，"最好"在文中或系统中表明来自于本项目的内容和创意，否则所有贡献者可能会鄙视你和你的项目。 使用本项目源码请尊重程序员职业和劳动
 
 ## 1、版本及功能
-
++ 版本v 1.0.9
+  - 新增水印放大比例、水印样式大小是否随机
 + 版本v 1.0.0
   - 1、支持文本水印；
   - 2、支持本地js，支持npm包；
-  - 2、支持浏览器：Chrome，Firefox，Safari；
-  - 3、支持api
+  - 3、支持浏览器：Chrome，Firefox，Safari；
   - 4、监听前端页面手动删除水印挂载的父元素，或删除影子DOM里的单个水印，当删除时会自动添加新水印
 
 ## 2、水印插件-使用
@@ -61,17 +60,17 @@
 第三步：在确保页面DOM加载完毕之后，调用watermark的load方法(手动加载):
 
 ```
-   <script>watermark.load({ watermark_txt: "测试水印，1021002301，测试水印，100101010111101" })</script>
+   <script>watermark.load({ watermark_txt: "1050226 xianxin_" })</script>
 ```
 
 注意：我们提供了init方法，用来初始化水印，添加load和resize事件
 
 ```
-   <script>watermark.init({ watermark_txt: "测试水印，1021002301，测试水印，100101010111101" })</script>
+   <script>watermark.init({ watermark_txt: "1050226 xianxin_" })</script>
 ```
 
 
-![image](https://github.com/xianxin011/water-mark-pls/blob/master/examples/image/simple.png)
+![image](https://github.com/xianxin011/static-source/blob/master/water-mark-pls/water-mark-pls.png?raw=true)
 
 ### 2.2 npm包引入
 
@@ -92,19 +91,19 @@ var watermarkDom = require("water-mark-pls")
 第三步：在确保页面DOM加载完毕之后，调用watermark的load方法(手动加载):
 
 ```
-   <script>watermark.load({ watermark_txt: "测试水印，1021002301，测试水印，100101010111101" })</script>
+   <script>watermark.load({ watermark_txt: "1050226 xianxin_" })</script>
 ```
 
 注意：(1)我们提供了init方法，用来初始化水印，添加load和resize事件
 
 ```
-   <script>watermark.init({ watermark_txt: "测试水印，1021002301，测试水印，100101010111101" })</script>
+   <script>watermark.init({ watermark_txt: "1050226 xianxin_" })</script>
 ```
 
 注意：(2)我们提供了remove方法，用来移除水印
 
 ```
-   <script>watermark.remove({ watermark_txt: "测试水印，1021002301，测试水印，100101010111101" })</script>
+   <script>watermark.remove({ watermark_txt: "1050226 xianxin_" })</script>
 ```
 
 ## 3、水印demo（测试工具）
@@ -121,7 +120,7 @@ var watermarkDom = require("water-mark-pls")
 例子
 
 ```js
-watermark.init({ watermark_txt: "测试水印，1021002301，测试水印，100101010111101" });
+watermark.init({ watermark_txt: "1050226 xianxin_" });
 ```
 
 ### 4.2 watermark.load(setting);
@@ -131,7 +130,7 @@ watermark.init({ watermark_txt: "测试水印，1021002301，测试水印，1001
 例子
 
 ```js
-watermark.load({ watermark_txt: "测试水印，1021002301，测试水印，100101010111101" });
+watermark.load({ watermark_txt: "1050226 xianxin_" });
 ```
 
 ### 4.3 watermark.remove();
@@ -180,13 +179,15 @@ watermark_scale_random:false, // 水印样式大小是否随机
 
 ```
  watermark.load({
-    watermark_txt: '1050226 xianxin_',  //水印的内容
-    watermark_color:'#5579ee',            //水印字体颜色
-    watermark_fontsize:'24px',          //水印字体大小
-    watermark_alpha:0.5,               //水印透明度，要求设置在大于等于0.005
-    watermark_angle:135,                 //水印倾斜度数
-    watermark_width:200,                //水印宽度
-    watermark_height:200,               //水印长度
+        watermark_txt: '1050226 xianxin_',//水印的内容
+        watermark_color_size: 10, //水印的颜色数量
+        watermark_fontsize:'16px',//水印字体大小
+        watermark_x:0,//水印初始化x坐标
+        watermark_y:0,//水印初始化y坐标
+        watermark_alpha:0.5,//水印透明度
+        watermark_width: 90,//水印宽度
+        watermark_height: 60,//水印长度
+        watermark_angle_random:true,//水印角度随机
 });
 ```
 
