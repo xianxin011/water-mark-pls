@@ -36,7 +36,9 @@
     watermark_width: 100, //水印宽度
     watermark_height: 100, //水印长度
     watermark_angle: 15, //水印倾斜度数
+    watermark_scale: 1, // 水印放大比例
     watermark_angle_random: false, //水印倾斜角度是否随机
+    watermark_scale_random: false, // 水印样式大小是否随机
     watermark_parent_width: 0, //水印的总体宽度（默认值：body的scrollWidth和clientWidth的较大值）
     watermark_parent_height: 0, //水印的总体高度（默认值：body的scrollHeight和clientHeight的较大值）
     watermark_parent_node: null, //水印插件挂载的父元素element,不输入则默认挂在body上
@@ -274,28 +276,32 @@
         /*设置水印相关属性start*/
         mask_div.id = defaultSettings.watermark_prefix + i + j;
         /*设置水印div倾斜显示*/
-        const scaleFactor = Math.random() + 1;
+        const scaleFactor = defaultSettings.watermark_scale_random
+          ? Math.random() + 1
+          : defaultSettings.watermark_scale;
+        /*设置字体样式*/
         const colorFactor =
           colors[
             Math.floor(
               i + Math.random() * defaultSettings.watermark_color_size
             ) % defaultSettings.watermark_color_size
           ];
+        /*设置旋转角度*/
         const angleFactor = defaultSettings.watermark_angle_random
           ? i == 0
             ? Math.trunc(Math.random() * 360)
             : Math.floor(Math.random() * i * 360) % 360
           : defaultSettings.watermark_angle;
-        mask_div.style.webkitTransform =
+        let transformStyle =
           'rotate(-' + angleFactor + 'deg)' + ' scale(' + scaleFactor + ')';
-        mask_div.style.MozTransform =
-          'rotate(-' + angleFactor + 'deg)' + ' scale(' + scaleFactor + ')';
-        mask_div.style.msTransform =
-          'rotate(-' + angleFactor + 'deg)' + ' scale(' + scaleFactor + ')';
-        mask_div.style.OTransform =
-          'rotate(-' + angleFactor + 'deg)' + ' scale(' + scaleFactor + ')';
-        mask_div.style.transform =
-          'rotate(-' + angleFactor + 'deg)' + ' scale(' + scaleFactor + ')';
+
+        // 处理浏览器兼容性
+        mask_div.style.webkitTransform = transformStyle;
+        mask_div.style.MozTransform = transformStyle;
+        mask_div.style.msTransform = transformStyle;
+        mask_div.style.OTransform = transformStyle;
+        mask_div.style.transform = transformStyle;
+
         mask_div.style.visibility = '';
         mask_div.style.position = 'absolute';
         /*选不中*/
