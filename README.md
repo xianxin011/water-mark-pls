@@ -168,6 +168,8 @@ watermark_parent_height:0,     //水印的总体高度（默认值：body的scro
 watermark_parent_node:null     //水印插件挂载的父元素element,不输入则默认挂在body上
 watermark_color_size: 10,      //水印的随机颜色数量，如果使用这个值，watermark_color将会失效
 watermark_angle_random: true, //水印的旋转角度随机
+watermark_scale: 1, // 水印放大比例 v1.0.9新增
+watermark_scale_random:false, // 水印样式大小是否随机
 ```
 
 上面的属性都支持配置的，怎么使用呢？
