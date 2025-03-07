@@ -76,7 +76,6 @@
 
   /*加载水印*/
   var loadMark = function (settings) {
-    /*采用配置项替换默认值，作用类似jquery.extend*/
     if (arguments.length === 1 && typeof arguments[0] === 'object') {
       var src = arguments[0] || {};
       for (let key in src) {
@@ -84,13 +83,9 @@
           src[key] &&
           defaultSettings[key] &&
           src[key] === defaultSettings[key]
-        )
+        ) {
           continue;
-        /*veronic: resolution of watermark_angle=0 not in force*/ else if (
-          src[key] ||
-          src[key] === 0
-        )
-          defaultSettings[key] = src[key];
+        } else if (src[key] || src[key] === 0) defaultSettings[key] = src[key];
       }
     }
 
@@ -343,7 +338,6 @@
 
   /*移除水印*/
   var removeMark = function () {
-    /*采用配置项替换默认值，作用类似jquery.extend*/
     if (arguments.length === 1 && typeof arguments[0] === 'object') {
       var src = arguments[0] || {};
       for (let key in src) {
@@ -351,13 +345,11 @@
           src[key] &&
           defaultSettings[key] &&
           src[key] === defaultSettings[key]
-        )
+        ) {
           continue;
-        /*veronic: resolution of watermark_angle=0 not in force*/ else if (
-          src[key] ||
-          src[key] === 0
-        )
+        } else if (src[key] || src[key] === 0) {
           defaultSettings[key] = src[key];
+        }
       }
     }
 
