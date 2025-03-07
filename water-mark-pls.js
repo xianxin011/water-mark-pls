@@ -77,15 +77,17 @@
   /*加载水印*/
   var loadMark = function (settings) {
     if (arguments.length === 1 && typeof arguments[0] === 'object') {
-      var src = arguments[0] || {};
-      for (let key in src) {
+      var object = arguments[0] || {};
+      for (var key in object) {
         if (
-          src[key] &&
+          object[key] &&
           defaultSettings[key] &&
-          src[key] === defaultSettings[key]
+          object[key] === defaultSettings[key]
         ) {
           continue;
-        } else if (src[key] || src[key] === 0) defaultSettings[key] = src[key];
+        } else if (object[key] || object[key] === 0) {
+          defaultSettings[key] = object[key];
+        }
       }
     }
 
@@ -287,7 +289,7 @@
             ? Math.trunc(Math.random() * 360)
             : Math.floor(Math.random() * i * 360) % 360
           : defaultSettings.watermark_angle;
-        let transformStyle =
+        var transformStyle =
           'rotate(-' + angleFactor + 'deg)' + ' scale(' + scaleFactor + ')';
 
         // 处理浏览器兼容性
@@ -339,16 +341,16 @@
   /*移除水印*/
   var removeMark = function () {
     if (arguments.length === 1 && typeof arguments[0] === 'object') {
-      var src = arguments[0] || {};
-      for (let key in src) {
+      var object = arguments[0] || {};
+      for (var key in object) {
         if (
-          src[key] &&
+          object[key] &&
           defaultSettings[key] &&
-          src[key] === defaultSettings[key]
+          object[key] === defaultSettings[key]
         ) {
           continue;
-        } else if (src[key] || src[key] === 0) {
-          defaultSettings[key] = src[key];
+        } else if (object[key] || object[key] === 0) {
+          defaultSettings[key] = object[key];
         }
       }
     }
@@ -443,17 +445,17 @@
   };
 
   var generateRandomHexColor = function () {
-    let letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
       color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
   };
 
   var generateRandomHexColorArray = function (size) {
-    let colors = [];
-    for (let i = 0; i < size; i++) {
+    var colors = [];
+    for (var i = 0; i < size; i++) {
       colors.push(generateRandomHexColor());
     }
     return colors;
