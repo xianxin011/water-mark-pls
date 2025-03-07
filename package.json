@@ -1,14 +1,14 @@
 {
   "version": "1.0.9",
   "license": "MIT",
-  "main": "index.js",
+  "main": "water-mark-pls.js",
   "keywords": [
     "watermark",
     "water-dom"
   ],
   "description": "watermark for DOM",
   "files": [
-    "index.js"
+    "water-mark-pls.js"
   ],
   "author": {
     "name": "xianxin_",

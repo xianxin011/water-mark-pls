@@ -45,7 +45,7 @@
     monitor: true, //monitor 是否监控， true: 不可删除水印; false: 可删水印。
   };
 
-  let MutationObserver =
+  const MutationObserver =
     window.MutationObserver ||
     window.WebKitMutationObserver ||
     window.MozMutationObserver;
@@ -431,7 +431,11 @@
     }
   };
 
-  var watermarkDom = new MutationObserver(callback);
+  const MutationObserverDom =
+    window.MutationObserver ||
+    window.WebKitMutationObserver ||
+    window.MozMutationObserver;
+  var watermarkDom = new MutationObserverDom(callback);
 
   var option = {
     childList: true,
